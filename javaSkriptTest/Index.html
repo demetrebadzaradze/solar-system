@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            overflow: hidden;
+        }
+        .conteiner{
+            font-size: 10px;
+            width: 40em;
+            height: 40em;
+            position: relative;
+        }
+        .sun{
+            position: absolute;
+            top: 15em;
+            left: 15em;
+            width: 10em;
+            height: 10em;
+            background-color: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 4em white;
+        }
+        <!--.mercury{ 
+            position: absolute;
+            border-style: solid;
+            border-color: white transparent transparent transparent;
+            border-width: 0.1em 0.1em 0.0em;
+            border-radius: 50%;
+            top: 9.6em;
+            right: 9.6em;
+            width: 20em;
+            height: 20em;
+            animation: orbit 2.5s linear infinite;
+        }
+        .venus{
+            position: absolute;
+            border-style: solid;
+            border-color: white transparent transparent transparent;
+            border-width: 0.1em 0.1em 0.0em;
+            border-radius: 50%;
+            top: 5em;
+            right: 5em;
+            width: 30em;
+            height: 30em;
+            animation: orbit 14.34s linear infinite;
+        }-->
+        .earth,.moon{
+            position: absolute;
+            border-style: solid;
+            border-color: white transparent transparent transparent;
+            border-width: 0.1em 0.1em 0.0em;
+            border-radius: 50%;
+        }
+        .earth{
+            top: -4em;
+            left: -4em;
+            width: 50em;
+            height: 50em;
+            animation: orbit 91s linear infinite;
+        }
+        .moon{
+            top: 3em;
+            right: 3em;
+            width: 8em;
+            height: 8em;
+            animation: orbit 0.25s linear infinite;
+        }
+        <!--.mars,.phobos,.deimos{
+            position: absolute;
+            border-style: solid;
+            border-color: white transparent transparent transparent;
+            border-width: 0.1em 0.1em 0.0em;
+            border-radius: 50%;
+        }
+        .mars{
+            top: -11em;
+            left: -11em;
+            width: 64em;
+            height: 64em;
+            animation: orbit 36.5s linear infinite;
+        }
+        .phobos{
+            top: 6em;
+            right: 6em;
+            width: 7em;
+            height: 5em;
+            animation: orbit 5s linear infinite;
+        }
+        .deimos{
+            top: 5em;
+            right: 5em;
+            width: 8em;
+            height: 8em;
+            animation: orbit 6s linear infinite;
+        }
+        .jupiter{
+            position: absolute;
+            border-style: solid;
+            border-color: white transparent transparent transparent;
+            border-width: 0.1em 0.1em 0.0em;
+            border-radius: 50%;
+            top: -25em;
+            right: -25em;
+            width: 90em;
+            height: 90em;
+            animation: orbit 14.34s linear infinite;
+        }
+
+
+        .venus::before{
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            top: 3em;
+            right: 3em;
+            width: 2em;
+            height: 2em;
+            background-color: rgb(228, 85, 85);
+        }
+
+        .mercury::before{
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            top: 2.3em;
+            right: 2.3em;
+            width: 1em;
+            height: 1em;
+            background-color: darkgray;
+        }-->
+        .earth::before,
+        .moon::before {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+        }
+        .earth::before{
+            top: 5.7em;
+            right: 5.7em;
+            width: 3em;
+            height: 3em;
+            background-color: aqua;
+        }
+        .moon::before{
+            top: 0.8em;
+            right: 0.2em;
+            width: 1.2em;
+            height: 1.2em;
+            background-color: silver;
+        }
+        <!--.mars::before,.phobos::before,.deimos::before{
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+        }
+        .mars::before{
+            top: 8em;
+            right: 8em;
+            width: 2.6em;
+            height: 2.6em;
+            background-color: red;
+        }
+        .phobos::before{
+            top: 0.8em;
+            right: 0em;
+            width: 0.8em;
+            height: 0.8em;
+            background-color: rgb(88, 77, 77);
+        }
+        .deimos::before{
+            top: 0.41em;
+            right: 1.2em;
+            width: 0.7em;
+            height: 0.7em;
+            background-color: rgb(132, 73, 73);
+        }
+        .jupiter::before{
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            top: 8.5em;
+            right: 8.5em;
+            width: 9em;
+            height: 9em;
+            background-color: rgb(228, 85, 85);
+        }-->
+
+
+        @keyframes orbit{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div  class="conteiner">
+        <div class="sun"></div>
+        <!--<div class="mercury"></div>
+        <div class="venus"></div>-->
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+        <!--<div class="mars">
+            <div class="phobos"></div>
+            <div class="deimos"></div>
+        </div>
+        <div class="jupiter"></div>-->
+
+    </div>
+    <script src="App.js" ></script>   <!--you dont need script and also you can add some more things by you self like another planets and day counter and so and so-->
+</body>
+</html>
